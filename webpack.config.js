@@ -1,4 +1,5 @@
 var HtmlWebpackPlugin = require("html-webpack-plugin")
+var path = require("path")
 
 module.exports = {
   mode: "development",
@@ -40,5 +41,9 @@ module.exports = {
     config: JSON.stringify({
       apiUrl: "http://localhost:8080"
     })
+  },
+  output: {
+    path: path.join(__dirname, "dist"),
+    filename: "bundle.js"
   }
 }
